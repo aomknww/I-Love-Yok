@@ -8,9 +8,11 @@
 </head>
 <body>
 
-    <h1>My Photo Gallery</h1>
+    <h1>Happy Valentine’s Day</h1>
     
     <div class="gallery" id="gallery"></div>
+    
+    <button class="next-btn" id="nextBtn">Next</button>
 
     <script>
         let images = [
@@ -29,12 +31,13 @@
                 let img = document.createElement("img");
                 img.src = images[index];
                 img.alt = "Photo " + (index + 1);
-                img.classList.add("fade-in"); // เพิ่มเอฟเฟกต์ค่อยๆ แสดงผล
+                img.classList.add("fade-in");
                 gallery.appendChild(img);
                 index++;
-                setTimeout(loadNextImage, 2500); // โหลดรูปใหม่ทุก 0.5 วินาที
             }
         }
+
+        document.getElementById("nextBtn").addEventListener("click", loadNextImage);
 
         window.onload = loadNextImage;
     </script>
