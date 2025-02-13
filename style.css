@@ -60,14 +60,15 @@ body {
 
 .buttons {
   display: flex;
-  justify-content: center;
-  gap: 20px; /* กำหนดระยะห่างระหว่างปุ่ม */
-  margin-top: 30px; /* เพิ่มระยะห่างระหว่างปุ่มกับรูป */
+  justify-content: center;  /* จัดวางปุ่มให้ตรงกลาง */
+  gap: 20px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+  margin-top: 20px; /* ระยะห่างจากรูปภาพ */
 }
 
-.next-btn, .back-btn {
+.back-btn, .next-btn {
   padding: 12px 24px;
-  font-size: 1.5rem;
+  font-size: 2vmin;
+  font-family: "Pangolin", cursive;
   background-color: #f64b79;
   color: white;
   font-weight: bold;
@@ -75,19 +76,12 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.next-btn:hover, .back-btn:hover {
+.back-btn:hover, .next-btn:hover {
   background-color: #d92a5b;
   color: #fff;
-}
-
-.back-btn {
-  background-color: #f5a0c0;
-}
-
-.back-btn:hover {
-  background-color: #e492a4;
 }
 
 body {
