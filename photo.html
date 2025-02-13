@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <h1>My Photo Gallery</h1>
+    
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        let images = [
+            "images/photo1.jpg", "images/photo2.jpg", "images/photo3.jpg",
+            "images/photo4.jpg", "images/photo5.jpg", "images/photo6.jpg",
+            "images/photo7.jpg", "images/photo8.jpg", "images/photo9.jpg",
+            "images/photo10.jpg", "images/photo11.jpg", "images/photo12.jpg",
+            "images/photo13.jpg", "images/photo14.jpg", "images/photo15.jpg"
+        ];
+
+        let index = 0;
+
+        function loadNextImage() {
+            if (index < images.length) {
+                let gallery = document.getElementById("gallery");
+                let img = document.createElement("img");
+                img.src = images[index];
+                img.alt = "Photo " + (index + 1);
+                img.classList.add("fade-in"); // เพิ่มเอฟเฟกต์ค่อยๆ แสดงผล
+                gallery.appendChild(img);
+                index++;
+                setTimeout(loadNextImage, 500); // โหลดรูปใหม่ทุก 0.5 วินาที
+            }
+        }
+
+        window.onload = loadNextImage;
+    </script>
+
+</body>
+</html>
