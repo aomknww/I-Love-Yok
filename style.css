@@ -23,6 +23,27 @@ body {
   top: 0vmin;
 }
 
+.next-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 2vmin;
+    font-family: "Pangolin", cursive;
+    background-color: #f980a1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    top: 40vmin;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.next-btn:hover {
+    background-color: #f64b79;
+}
+
 .envelope {
   position: relative;
   background: #f980a1;
