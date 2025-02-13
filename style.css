@@ -18,6 +18,49 @@ body {
   justify-content: center;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #fee2e9;
+}
+
+h1 {
+    color: #f64b79;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 รูปต่อแถว */
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* เอฟเฟกต์แอนิเมชันที่ทำให้รูปค่อยๆ ปรากฏจากซ้ายไปขวา */
+.fade-in {
+    opacity: 0;
+    transform: translateX(-20px); /* เคลื่อนที่จากซ้ายไปขวา */
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px); /* เคลื่อนที่จากซ้าย */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* กลับไปที่ตำแหน่งเดิม */
+    }
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 .container {
   position: relative;
   top: 0vmin;
