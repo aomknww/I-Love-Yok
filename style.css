@@ -5,9 +5,6 @@
 
 h1 {
   font-family: Solitreo;
-  color: #f64b79;
-  text-align: center;
-  margin-top: 20px; /* ให้ห่างจากด้านบนของหน้าหน่อย */
 }
 
 body {
@@ -17,143 +14,13 @@ body {
   font-family: "Pangolin", cursive;
   font-size: 1vmin;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* จัดตำแหน่งให้ขึ้นบนสุด */
-  text-align: center;
-  padding-top: 40px; /* เพิ่มระยะห่างระหว่าง h1 กับกริดของรูป */
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 รูปต่อแถว */
-  gap: 10px;
   justify-content: center;
-  padding: 20px;
-  margin-bottom: 50px; /* เพิ่มระยะห่างจากปุ่ม "Next" */
-}
-
-/* เอฟเฟกต์แอนิเมชันที่ทำให้รูปค่อยๆ ปรากฏจากซ้ายไปขวา */
-.fade-in {
-  opacity: 0;
-  transform: translateX(-20px); /* เคลื่อนที่จากซ้ายไปขวา */
-  animation: fadeIn 0.5s ease-in forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px); /* เคลื่อนที่จากซ้าย */
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0); /* กลับไปที่ตำแหน่งเดิม */
-  }
-}
-
-.gallery img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;  /* จัดวางปุ่มให้ตรงกลาง */
-  gap: 20px; /* เพิ่มระยะห่างระหว่างปุ่ม */
-  margin-top: 20px; /* ระยะห่างจากรูปภาพ */
-}
-
-.back-btn, .next-btn {
-  padding: 12px 24px;
-  font-size: 2vmin;
-  font-family: "Pangolin", cursive;
-  background-color: #f64b79;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.back-btn:hover, .next-btn:hover {
-  background-color: #d92a5b;
-  color: #fff;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #fee2e9;
-}
-
-h1 {
-    color: #f64b79;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 รูปต่อแถว */
-    gap: 10px;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* เอฟเฟกต์แอนิเมชันที่ทำให้รูปค่อยๆ ปรากฏจากซ้ายไปขวา */
-.fade-in {
-    opacity: 0;
-    transform: translateX(-20px); /* เคลื่อนที่จากซ้ายไปขวา */
-    animation: fadeIn 0.5s ease-in forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px); /* เคลื่อนที่จากซ้าย */
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0); /* กลับไปที่ตำแหน่งเดิม */
-    }
-}
-
-.gallery img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .container {
   position: relative;
   top: 0vmin;
-}
-
-.next-btn {
-    margin-top: 30px; /* เพิ่มระยะห่างจากด้านบน */
-    padding: 12px 24px;
-    font-size: 2.5vmin;
-    font-family: "Pangolin", cursive;
-    background-color: #f64b79;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-    position: absolute;
-    bottom: -10vmin; /* ขยับปุ่มลงล่าง */
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.next-btn:hover {
-    background-color: #d92a5b;
-    color: #fff;
 }
 
 .envelope {
