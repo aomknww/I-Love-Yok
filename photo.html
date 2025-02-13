@@ -12,7 +12,10 @@
     
     <div class="gallery" id="gallery"></div>
     
-    <button class="next-btn" onclick="goToNextPage()">Next</button>
+    <div class="buttons">
+        <button class="back-btn" onclick="goBack()">Back</button>
+        <button class="next-btn" onclick="goToNextPage()">Next</button>
+    </div>
 
     <script>
         let images = [
@@ -43,6 +46,11 @@
         // ฟังก์ชันสำหรับปุ่ม Next ไปหน้าถัดไป
         function goToNextPage() {
             window.location.href = "nextpage.html"; // ปรับ URL ให้เป็นหน้าถัดไปที่ต้องการ
+        }
+
+        // ฟังก์ชันสำหรับปุ่ม Back ไปยังหน้าก่อนหน้า
+        function goBack() {
+            window.history.back(); // ไปหน้าก่อนหน้า
         }
     </script>
 </body>
